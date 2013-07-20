@@ -7,13 +7,30 @@ Nephia::Plugin::CSRFDefender - CSRF Defender Plugin for Nephia
     package MyApp.pm;
     use strict;
     use warnings;
-    use Nephia plugins => qw[
+    use Nephia plugins => [
+        'PlackSession',
         'CSRFDefender'
     ];
 
 # DESCRIPTION
 
 Nephia::Plugin::CSRFDefender denies CSRF request.
+
+# METHODS
+
+- get\_csrf\_defender\_token()
+
+    Get a CSRF defender token.
+
+- validate\_csrf()
+
+    Validate CSRF token manually.
+
+# SEE ALSO
+
+[Nephia](http://search.cpan.org/perldoc?Nephia)
+
+[Amon2::Plugin::Web::CSRFDefender](http://search.cpan.org/perldoc?Amon2::Plugin::Web::CSRFDefender)
 
 # LICENSE
 
